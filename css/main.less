@@ -1,0 +1,346 @@
+// @keyframes 
+@keyframes btnJump {
+    0% {
+        transform: scale(1) translateY(0px)
+    }
+
+    50% {
+        transform: scale(1.1) translateY(10px)
+    }
+
+    100% {
+        transform: scale(1) translateY(0px)
+    }
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-800px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+// ---------------------------------------------
+// animate
+.why-list-box{
+    transition: all 1s;
+}
+.why-list-box.animation{
+    opacity: 0;
+    transform: translateY(100px);
+}
+.why-list-box:nth-child(1).animation,
+.why-list-box:nth-child(2).animation{
+    transform: translateX(-200px);
+}
+.why-list-box:nth-child(3).animation,
+.why-list-box:nth-child(4).animation{
+    transform: translateX(200px);
+}
+.about img,.about-txt {
+    transition: all 2s;
+}
+.about img.animation{
+    opacity: 0;
+    transform: translateX(500px);
+}
+.about-txt.animation{
+    opacity: 0;
+    transform: translateX(-500px);
+}
+.Agents-card{
+    transition: all 2s;
+}
+.Agents-card.animation{
+    transform: rotateY(360deg);
+    opacity: 0;
+}
+.Pack-box>li{
+    transition: all 1s;
+}
+.Pack-box>li.animation{
+    transform: translateY(300px);
+    opacity: 0;
+}
+.blog-card{
+    transition: all 2s;
+}
+.blog-card:first-child.animation{
+    transform: translateX(-500px);
+    opacity: 0;
+}
+.book{
+    transition: all 2s;
+}
+.book.animation{
+    opacity: 0;
+    transform: translateX(500px);
+}
+.contact-box form,.block{
+    transition: all 2s;
+}
+.contact-box form.animation{
+    transform: translateX(500px);
+    opacity: 0;
+}
+.block.animation{
+    transform: translateX(-500px);
+    opacity: 0;
+}
+// ---------------------------------------------
+
+
+/*header */
+html {
+    font-family: 微软雅黑;
+    scroll-behavior: smooth;
+  }
+#header {
+    h1.logo {
+        font-family: 微软雅黑;
+        font-size: 2rem;
+        color: #fff;
+        margin-top: -5px;
+    }
+
+    .container-fluid>.navbar-collapse {
+        margin: 0;
+    }
+
+    .myMail {
+        padding: 10px;
+        text-align: right;
+        line-height: 17px;
+        font-size: 17px;
+        color: #fff;
+        .half{
+            float: right;
+        }
+        .icon-box {
+            display: inline-block;
+        }
+
+        span {
+            &>i {
+                background: none;
+            }
+        }
+
+        i {
+            margin: 0 5px;
+            vertical-align: middle;
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background: #052658;
+            border-radius: 50%;
+
+            &:hover {
+                background: rgb(226, 241, 255);
+                color: #052658;
+            }
+        }
+    }
+
+    nav {
+        li {
+            text-align: center;
+        }
+
+        &.navbar {
+            border: none;
+        }
+ 
+        .navbar-nav {
+            color: black;
+            @media screen and (max-width: 766px) {
+                color: black;
+                background: #fff;
+            }
+
+        }
+
+        .navbar-brand {
+            span{
+                font-size: 4rem;
+                margin: 0 10px;
+            }
+            padding: 0 15px;
+        }
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        background: none;
+        color: #fff;
+        @media screen and (max-width: 766px) {
+            color: black;
+            background: #fff;
+        }
+
+        &:hover {
+            background: none;
+        }
+
+    }
+
+    .navbar-default .navbar-nav .open {
+        .dropdown-menu {
+            background: #fff;
+
+            &>li>a {
+                color: #000;
+            }
+        }
+
+    }
+
+    position: relative;
+    height: 800px;
+    line-height: 30px;
+    background-color: black;
+    overflow: hidden;
+    background: url(../images/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    padding: 0;
+
+    .mask {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        top: 0;
+        z-index: 0;
+    }
+
+    .top-menu {
+        background: rgba(0, 0, 0, 0)
+    }
+
+    .text {
+        color: #fff;
+        z-index: 99;
+        width: 80%;
+        margin: 0 auto;
+        line-height: 3em;
+        padding-top: 18vh;
+        text-align: center;
+        animation: drop 2s ease 0s 1;
+    }
+
+    .text h2 {
+        color: #fff;
+        font-weight: 600;
+        font-family: san-serif;
+        font-size: 34px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .text span {
+        font-size: 17px;
+        color: #ddd;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        animation: btnJump 2s ease 0s infinite;
+    }
+}
+
+#about {
+    
+    .img-box {
+        box-shadow: 5px 5px 15px #ddd;
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.toTop{
+    display: block;
+    z-index: 99;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    right: 2%;
+    bottom: 10%;
+    color: #fff;
+    background: #496885;
+    position: fixed;
+    opacity: 0;
+    &:hover{
+        background: rgb(226, 241, 255);
+    }
+}
+
+
+
+/* book */
+#book{
+    .ibox{  
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        font-size: 33px;
+        line-height: 40px;
+        background: #16A667;
+        
+       border-radius: 10px;
+        text-align: center;
+    }
+    width: 100%;
+	padding: 58px 0;
+    background-color: #052658;
+    color: #fff;
+    .service {
+        width: 100%;
+        background-color: #000;
+        overflow: hidden;
+        color: #999;
+    }
+    
+    .service h1 {
+        color: #fff;
+    }
+    
+    .service-box {
+        position: relative;
+    }
+    
+    .service-grids {
+        width: 33%;
+        float: left;
+        text-align: center;
+    }
+    
+    .grids {
+        padding: 20px;
+    }
+    
+    .grids img {
+        background-color: #16A667;
+        border-radius: 15%;
+        padding: 10px 15px;
+        transition: all .3s;
+    }
+    
+    .grids img:hover {
+        background-color: darkorange;
+    }
+}
+
+
+
