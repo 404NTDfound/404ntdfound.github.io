@@ -22,6 +22,11 @@
         transform: translateY(0px)
     }
 }
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
 // ---------------------------------------------
 // animate
 .why-list-box{
@@ -251,7 +256,7 @@ html {
         width: 100%;
         text-align: center;
         margin: 0 auto;
-        animation: btnJump 2s ease 0s infinite;
+        // animation: btnJump 2s ease 0s infinite;
     }
 }
 
@@ -290,57 +295,72 @@ html {
 
 /* book */
 #book{
-    .ibox{  
-        display: inline-block;
+   position: relative;
+   color: aliceblue;
+   background: #052658;
+   background-image: url(../images/蒲公英.png); 
+   background-position: 0px 0px;
+   background-repeat: repeat-x;
+   animation: animatedBackground 40s linear infinite;
+   h5{
+    line-height: 300px;
+    font-size: 3rem;
+    font-family: "华文行楷";
+    margin: 30px auto;
+}
+}
+// 旋转方块
+    .boxes {
+        margin:0 auto;
         width: 50px;
         height: 50px;
-        font-size: 33px;
-        line-height: 40px;
-        background: #16A667;
-        
-       border-radius: 10px;
-        text-align: center;
-    }
-    width: 100%;
-	padding: 58px 0;
-    background-color: #052658;
-    color: #fff;
-    .service {
-        width: 100%;
-        background-color: #000;
-        overflow: hidden;
-        color: #999;
+        position: absolute;
+        margin-top: 0;
+        top: 10%;
+        right: 10%;
+        /* perspective: 500px; */
+        transform-style: preserve-3d;
+        transform: rotateX(30deg) rotateY(30deg);
+        transition: all .1s;
     }
     
-    .service h1 {
-        color: #fff;
-    }
+        .boxes div {
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            /* background: rgba(160, 212, 255, 0.5) */
+        }
     
-    .service-box {
-        position: relative;
-    }
+        .boxes div:nth-child(1) {
+            transform: translateZ(-25px);
+            background: lightblue;
+        }
     
-    .service-grids {
-        width: 33%;
-        float: left;
-        text-align: center;
-    }
+        .boxes div:nth-child(2) {
+            transform: translateZ(25px);
+            background: rgb(163, 219, 238);
+        }
     
-    .grids {
-        padding: 20px;
-    }
+        .boxes div:nth-child(3) {
+            transform: rotateY(90deg) translateZ(25px);
+            background: rgb(127, 219, 250);
+        }
     
-    .grids img {
-        background-color: #16A667;
-        border-radius: 15%;
-        padding: 10px 15px;
-        transition: all .3s;
-    }
+        .boxes div:nth-child(4) {
+            transform: rotateY(90deg) translateZ(-25px);
+            background: lightgreen;
+        }
     
-    .grids img:hover {
-        background-color: darkorange;
-    }
-}
-
-
-
+        .boxes div:nth-child(5) {
+            transform: rotateX(90deg) translateZ(25px);
+            background: lightpink;
+        }
+    
+        .boxes div:nth-child(6) {
+            transform: rotateX(90deg) translateZ(-25px);
+            background: lightsalmon;
+    
+        }

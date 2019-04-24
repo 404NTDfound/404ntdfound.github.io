@@ -46,6 +46,22 @@
             transform: translateY(0px);
   }
 }
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 .why-list-box {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -277,8 +293,6 @@ html {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  -webkit-animation: btnJump 2s ease 0s infinite;
-          animation: btnJump 2s ease 0s infinite;
 }
 #about .img-box {
   box-shadow: 5px 5px 15px #ddd;
@@ -307,49 +321,74 @@ html {
 }
 /* book */
 #book {
-  width: 100%;
-  padding: 58px 0;
-  background-color: #052658;
-  color: #fff;
+  position: relative;
+  color: aliceblue;
+  background: #052658;
+  background-image: url(../images/蒲公英.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  -webkit-animation: animatedBackground 40s linear infinite;
+          animation: animatedBackground 40s linear infinite;
 }
-#book .ibox {
-  display: inline-block;
+#book h5 {
+  line-height: 300px;
+  font-size: 3rem;
+  font-family: "华文行楷";
+  margin: 30px auto;
+}
+.boxes {
+  margin: 0 auto;
   width: 50px;
   height: 50px;
-  font-size: 33px;
-  line-height: 40px;
-  background: #16A667;
-  border-radius: 10px;
-  text-align: center;
+  position: absolute;
+  margin-top: 0;
+  top: 10%;
+  right: 10%;
+  /* perspective: 500px; */
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(30deg) rotateY(30deg);
+          transform: rotateX(30deg) rotateY(30deg);
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
-#book .service {
+.boxes div {
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
   width: 100%;
-  background-color: #000;
-  overflow: hidden;
-  color: #999;
+  height: 100%;
+  opacity: .8;
+  /* background: rgba(160, 212, 255, 0.5) */
 }
-#book .service h1 {
-  color: #fff;
+.boxes div:nth-child(1) {
+  -webkit-transform: translateZ(-25px);
+          transform: translateZ(-25px);
+  background: lightblue;
 }
-#book .service-box {
-  position: relative;
+.boxes div:nth-child(2) {
+  -webkit-transform: translateZ(25px);
+          transform: translateZ(25px);
+  background: #a3dbee;
 }
-#book .service-grids {
-  width: 33%;
-  float: left;
-  text-align: center;
+.boxes div:nth-child(3) {
+  -webkit-transform: rotateY(90deg) translateZ(25px);
+          transform: rotateY(90deg) translateZ(25px);
+  background: #7fdbfa;
 }
-#book .grids {
-  padding: 20px;
+.boxes div:nth-child(4) {
+  -webkit-transform: rotateY(90deg) translateZ(-25px);
+          transform: rotateY(90deg) translateZ(-25px);
+  background: lightgreen;
 }
-#book .grids img {
-  background-color: #16A667;
-  border-radius: 15%;
-  padding: 10px 15px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+.boxes div:nth-child(5) {
+  -webkit-transform: rotateX(90deg) translateZ(25px);
+          transform: rotateX(90deg) translateZ(25px);
+  background: lightpink;
 }
-#book .grids img:hover {
-  background-color: darkorange;
+.boxes div:nth-child(6) {
+  -webkit-transform: rotateX(90deg) translateZ(-25px);
+          transform: rotateX(90deg) translateZ(-25px);
+  background: lightsalmon;
 }
 /*# sourceMappingURL=./main.css.map */
