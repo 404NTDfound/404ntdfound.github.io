@@ -6,14 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人作品</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="container-fluid">
         <li><a href="./Blog/index.html">个人主页</a></li>
         <li><a href="./3Dcard/index.html">3d卡片</a></li>
+        <div class="block">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+    <style>
+        .block {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* perspective: 500px; */
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(30deg);
+            transition: all .1s;
+        }
 
+        .block div {
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            border: 1px solid rgb(124, 122, 255);
+            background: rgb(173, 230, 187);
+            /* background: rgba(160, 212, 255, 0.5) */
+        }
+
+        .block div:nth-child(1) {
+            transform: translateZ(-100px);
+        }
+
+        .block div:nth-child(2) {
+            transform: translateZ(100px);
+        }
+
+        .block div:nth-child(3) {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .block div:nth-child(4) {
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+        .block div:nth-child(5) {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .block div:nth-child(6) {
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+    </style>
+    <script>
+        box = document.getElementsByClassName('block')[0]
+        var x = 1;
+        setInterval(function name(params) {
+            x++;
+            box.style.transform = 'rotateX(30deg) rotateY(' + (30 + x) + 'deg)'
+        }, 100)
+    </script>
 </body>
 
 </html>
