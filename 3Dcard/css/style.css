@@ -1,0 +1,249 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  background: -webkit-linear-gradient(#ffd5ff, #ff87c3, #8d98ff);
+  background: linear-gradient(#ffd5ff, #ff87c3, #8d98ff);
+}
+.block {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.stage {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+          align-items: center;
+  background: -webkit-linear-gradient(#ffd5ff, #ff87c3, #8d98ff);
+  background: linear-gradient(#ffd5ff, #ff87c3, #8d98ff);
+}
+.stage .card {
+  width: 400px;
+  height: 600px;
+  color: #fff;
+  background: url('../img/600x600.jpg');
+  background-size: cover;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translateZ(100px) rotateX(0deg);
+          transform: translateZ(100px) rotateX(0deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.stage .card::before,
+.stage .card::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  border-radius: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.stage .card::after {
+  opacity: 0;
+}
+.stage .card::before {
+  -webkit-transform: translateZ(-20px);
+          transform: translateZ(-20px);
+  box-shadow: 0px 20px 20px #333;
+}
+.stage .card .chart {
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+.stage .card .chart .bar {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  padding: 0;
+  border: none;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+.stage .card .chart .bar i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  line-height: 100%;
+  position: absolute;
+  color: #000;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+  background: #eeeeee;
+  margin: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.stage .card .chart .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+  background: linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+  background-color: grey;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  top: 0;
+  left: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.stage .card .chart .bar::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  background: -webkit-linear-gradient(top, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+  background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+  background-color: grey;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  bottom: 0;
+  left: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.stage .card.active {
+  -webkit-transform: translateZ(100px) rotateX(45deg);
+          transform: translateZ(100px) rotateX(45deg);
+}
+.stage .card.active::after {
+  opacity: .4;
+}
+.stage .card.active .bar::before {
+  width: 150px;
+}
+.stage .card.active .bar::after {
+  height: 150px;
+}
+.stage .card.active .bar i {
+  -webkit-transform: translateZ(150px);
+          transform: translateZ(150px);
+}
+.stage .card.active .bar2::before {
+  width: 100px;
+}
+.stage .card.active .bar2::after {
+  height: 100px;
+}
+.stage .card.active .bar2 i {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+.stage .card.active .bar3::before {
+  width: 80px;
+}
+.stage .card.active .bar3::after {
+  height: 80px;
+}
+.stage .card.active .bar3 i {
+  -webkit-transform: translateZ(80px);
+          transform: translateZ(80px);
+}
+.stage .card.active .bar4::before {
+  width: 50px;
+}
+.stage .card.active .bar4::after {
+  height: 50px;
+}
+.stage .card.active .bar4 i {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+.stage .card.active .bar5::before {
+  width: 130px;
+}
+.stage .card.active .bar5::after {
+  height: 130px;
+}
+.stage .card.active .bar5 i {
+  -webkit-transform: translateZ(130px);
+          transform: translateZ(130px);
+}
+.stage .card.active .bar6::before {
+  width: 30px;
+}
+.stage .card.active .bar6::after {
+  height: 30px;
+}
+.stage .card.active .bar6 i {
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+.stage .card.active .bar7::before {
+  width: 70px;
+}
+.stage .card.active .bar7::after {
+  height: 70px;
+}
+.stage .card.active .bar7 i {
+  -webkit-transform: translateZ(70px);
+          transform: translateZ(70px);
+}
+/*# sourceMappingURL=./style.css.map */

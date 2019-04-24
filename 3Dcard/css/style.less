@@ -1,0 +1,214 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(rgb(255, 213, 255), rgb(255, 135, 195), rgb(141, 152, 255));
+}
+
+.block {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.stage {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    flex-direction: column; //column：纵向排列。
+    justify-content: center; //弹性项目向行尾紧挨着填充
+    align-items: center; //center：弹性盒子元素在该行的侧轴（纵轴）上居中放置
+    background: linear-gradient(rgb(255, 213, 255), rgb(255, 135, 195), rgb(141, 152, 255));
+
+    // transform: rotateY(30deg) rotateX(30deg);
+    .card {
+        width: 400px;
+        height: 600px;
+        color: #fff;
+        background: url('../img/600x600.jpg');
+        background-size: cover;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        transform-origin: top;
+        transform: translateZ(100px) rotateX(0deg);
+        transition: all 1s;
+
+        &::before,
+        &::after {
+            .block;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            border-radius: 20px;
+            transition: all 1s;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+
+        &::before {
+            transform: translateZ(-20px);
+            box-shadow: 0px 20px 20px #333;
+        }
+
+        
+
+        .chart {
+            display: flex;
+            transform-style: preserve-3d;
+            position: relative;
+            transition: all 1.5s ease;
+
+            .bar {
+                width: 20px;
+                height: 20px;
+                margin: 10px;
+                padding: 0;
+                border: none;
+                position: relative;
+                transform: rotate(-45deg);
+                transform-style: preserve-3d;
+                transition: all 1.5s ease;
+                
+                i {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    text-align: center;
+                    line-height: 100%;
+                    position: absolute;
+                    color: #000;
+                    box-sizing: border-box;
+                    transform: translateZ(0px);
+                    background: rgb(238, 238, 238);
+                    margin: 0;
+                    transition: inherit;
+                }
+
+                &::before {
+                    .block;
+                    width: 0px;
+                    height: 100%;                   
+                    background: linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+                    background-color: grey;
+                    transform-origin: left;
+                    transform: rotateY(-90deg);
+                    top: 0;
+                    left: 0;
+                    transition: inherit;
+                }
+
+                &::after {
+                    .block;
+                    width: 100%;                   
+                    height: 0px;
+                    background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);                    background-color: grey;
+                    transform-origin: bottom;
+                    transform: rotateX(-90deg);
+                    bottom: 0;
+                    left: 0;
+                    transition: inherit;
+                }
+            }
+        }
+        &.active {
+            transform: translateZ(100px) rotateX(45deg);
+
+            &::after {
+                opacity: .4;
+            }
+
+            .bar {
+                &::before {
+                    width: 150px;
+                }
+                &::after{
+                    height: 150px;
+                }
+                i {
+                    transform: translateZ(150px);
+                }
+            }
+            .bar2{
+                &::before {
+                    width: 100px;
+                }
+                &::after{
+                    height: 100px;
+                }
+                i {
+                    transform: translateZ(100px);
+                }
+            }
+            .bar3{
+                &::before {
+                    width: 80px;
+                }
+                &::after{
+                    height: 80px;
+                }
+                i {
+                    transform: translateZ(80px);
+                }
+            }
+            .bar4{
+                &::before {
+                    width: 50px;
+                }
+                &::after{
+                    height: 50px;
+                }
+                i {
+                    transform: translateZ(50px);
+                }
+            }
+            .bar5{
+                &::before {
+                    width: 130px;
+                }
+                &::after{
+                    height: 130px;
+                }
+                i {
+                    transform: translateZ(130px);
+                }
+            }
+            .bar6{
+                &::before {
+                    width: 30px;
+                }
+                &::after{
+                    height: 30px;
+                }
+                i {
+                    transform: translateZ(30px);
+                }
+            }
+            .bar7{
+                &::before {
+                    width: 70px;
+                }
+                &::after{
+                    height: 70px;
+                }
+                i {
+                    transform: translateZ(70px);
+                }
+            }
+            
+
+        }
+    }
+}
