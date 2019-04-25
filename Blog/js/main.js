@@ -29,10 +29,5 @@ $(document).scroll(function () {
     }
     })
 });
-if ($('.toTop').offset().top>$('#why').offset().top) {
-    $('.toTop').css({'opcity' :'1'})
-}else{
-    $('.toTop').css({'opcity' :'0'})
-}
 
 
