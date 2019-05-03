@@ -414,6 +414,8 @@ h1 span {
 
 #blog img {
 	width: 100%;
+	border: 5px solid lightblue;
+	border-radius: 10px;
 	display: block;
 	margin: 0 auto;
 }
@@ -621,25 +623,28 @@ footer .footer ul li p {
 
 .footer-grids .footer-list li {
 	line-height: 1.8em;
-	color: #707579;
+	color: #e2e7eb;
 	width: 100%;
 	display: block;
 	float: left;
 }
 
 .footer-grids .footer-list a {
-	color: #707579;
+	color: #ebf6ff;
 
 }
 
 .footer-grids .footer-list a:hover {
-	color: #0079c1;
+	color: #86d3ff;
 }
 
 footer hr {
 	width: 100%;
 	margin: 20px 0;
 	border: 1px solid #707579;
+}
+footer .footer span{
+	margin: 5px;
 }
 
 .bottom-btn {
