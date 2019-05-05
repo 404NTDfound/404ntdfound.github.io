@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+    <div class="stage">
+        <div class="block">
+            <div class="box"><img src="./images/a1.png" alt=""></div>
+            <div class="box"><img src="./images/a2.png" alt=""></div>
+            <div class="box"><img src="./images/a3.png" alt=""></div>
+            <div class="box"><img src="./images/a4.png" alt=""></div>
+        </div>
+
+
+        <div class="imgBox">
+            <img src="./images/a1.png" alt="">
+            <!-- <i class="fa fa-arrow-right"></i>
+            <i class="fa fa-arrow-left"></i> -->
+        </div>
+    </div>
+
+
+    <style>
+        .stage {
+            width: 500px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .block::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            position: relative;
+            width: 50px;
+            float: left;
+            padding: 2px;
+            margin: 10px;
+            background: rgba(192, 192, 192, 0.5);
+            border: 2px solid transparent;
+            cursor: url('./images/T1nTBDFCRbXXbzTk_b-25-20.png'), auto;
+        }
+
+        .box:first-child {
+            margin-left: 0;
+        }
+
+        .box.active {
+            border: 2px solid rgb(255, 113, 113);
+        }
+
+        .box.active::after {
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            margin-left: -2.5px;
+            width: 0;
+            content: '';
+            display: block;
+            border-top: 5px solid rgb(255, 113, 113);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+
+        .box img {
+            display: block;
+            width: 100%;
+        }
+
+
+
+        .imgBox {
+            width: 0;
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 10px 0 0 0;
+            cursor: url('./images/T1oq4AFupvXXcu5FDa-20-20.png'), auto;
+            background-image: url('./images/a1.png');
+            transition: all .3s;
+        }
+
+        .imgBox img {
+            width: 100%;
+        }
+
+        /* .imgBox:hover i {
+            opacity: .8;
+        } */
+
+        .imgBox i {
+            font-size: 24px;
+            line-height: 24px;
+            color: #fff;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            transition: all .3s;
+        }
+
+        .imgBox i:nth-child(1) {
+            right: 0;
+        }
+
+        .imgBox i:nth-child(2) {
+            right: 0;
+        }
+    </style>
+    <script>
+        var box = document.querySelectorAll('.box')
+        var imgBox = document.querySelector('.imgBox')
+        var next = document.querySelectorAll('i')[0]
+        var prev = document.querySelectorAll('i')[1]
+
+        for (var i = 0; i < box.length; i++) {
+            box[i].isSpread = false;
+            box[i].onclick = function (parme) {
+                var x = this;
+                // imgBox.style.backgroundImage = 'url(' + x.querySelector('img').src + ')'
+                imgBox.querySelector('img').src = x.querySelector('img').src
+                imgBox.style.width = '400px'
+                box.forEach(function (element) {
+                    element.className = 'box';
+                    element.isSpread = false;
+                });
+                this.className = 'box active'
+            }
+        }
+
+        
+
+        var toggle = function (params) {
+            box.forEach(function name(element) {
+                element.className = '';
+                element.isSpread = false;
+            });
+            params.className = 'box active';
+            params.isSpread = true;
+            element.querySelector('img').src = parmes.querySelector('img').src
+        }
+
+        imgBox.onclick = function () {
+            imgBox.style.width = '0px'
+        }
+    </script>
+</body>
+
+</html>

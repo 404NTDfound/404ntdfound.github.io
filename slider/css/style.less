@@ -1,0 +1,94 @@
+#swiper {
+    width: 1280px;
+    margin: 20px auto;
+    background: url(../images/1.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid rgb(2, 13, 20);
+    transform: rotateY(0);
+    transition: all .3s;
+    &:hover {
+        .button {
+            span {
+                left: 0;
+                background: rgba(2, 13, 20, 0.541);
+                &:nth-child(2) {
+                    right: 0;
+                }
+            }
+        }
+
+    }
+
+    .content {
+        width: 6400px;
+        height: 720px;
+        transition: all .3s;
+        li {
+            width: 1280px;
+            height: 720px;
+            list-style: none;
+            text-align: center;
+            float: left;
+            &img{
+                width: 100%;
+            }            
+        }
+    }
+
+    .button {
+
+        span {
+            width: 60px;
+            height: 60px;
+            border-radius: 5%;
+            line-height: 60px;
+            position: absolute;
+            top: 50%;
+            left: -88px;
+            margin-top: -30px;            
+            text-align: center;
+            background: rgba(90, 207, 253, .6);
+            font-size: 18px;           
+            transition: all .3s;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+            i{
+                position: relative;
+                font-size: 30px;
+                vertical-align: center;
+            }
+            &:nth-child(2) {
+                left: auto;
+                right: -88px;
+            }
+        }
+    }
+
+    .list {
+        width: 100%;
+        
+        list-style: none;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        bottom: 5%;
+        li {
+            
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 0;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            display: inline-block;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                background: #fff;
+            }
+        }
+    }
+}

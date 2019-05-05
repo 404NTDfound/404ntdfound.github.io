@@ -420,7 +420,8 @@ h1 span {
 	margin: 0 auto;
 }
 
-#blog .blog .blog-box li {
+#blog .blog .blog-box>li {
+	min-height: 350px;
 	float: left;
 	padding: 15px;
 }
@@ -431,6 +432,7 @@ h1 span {
 }
 
 #blog .blog .blog-box li .blog-card {
+	border-radius: 10px;
 	font-size: 16px;
 	letter-spacing: 1px;
 	padding: 0 0 20px 0;
@@ -438,6 +440,7 @@ h1 span {
 }
 
 #blog .blog .blog-box li .blog-card:hover {
+	border-radius: 10px;
 	box-shadow: 2px 2px 15px #eee;
 }
 

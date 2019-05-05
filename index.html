@@ -6,15 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人作品</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Blog/css/index.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <li><a href="./Blog/index.html">个人主页</a></li>
-        <li><a href="./3Dcard/index.html">3d卡片</a></li>
-        <li><a href="./Cultivation/index.html">纯CSS页面</a></li>
-        <div class="block">
+    <div class="container-fluid wrap">
+        <!-- <h1 class="center">个人作品</h1>
+        <ul>
+            <li><a href="./Blog/index.html">个人主页</a></li>
+            <li><a href="./3Dcard/index.html">3d卡片</a></li>
+            <li><a href="./Cultivation/index.html">农业页面</a></li>
+        </ul> -->
+        <div id="blog">
+            <div class="blog container">
+                <div class="title"> <span>个人</span>作品</div>
+                <div class="blog-box">
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/index.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS <span
+                                        class=" fa fa-tag"></span>
+                                    页面排版</span>
+                                <h5 class="card-title"><a href="./Blog/index.html">个人博客主页</a></h5>
+                                <p class="card-text">引用bootstrap框架布局，响应式布局，CSS3动画效果
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/3dcard.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    视觉效果</span>
+                                <h5 class="card-title"><a href="./3Dcard/index.html">3d卡片</a></h5>
+                                <p class="card-text">CSS3 3D效果实现卡片立体翻转
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/PAGE.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS <span class=" fa fa-tag"></span>
+                                    页面排版</span>
+                                <h5 class="card-title"><a href="./Cultivation/index.html">农业宣传网页</a></h5>
+                                <p class="card-text">参考网络页面排版，基本纯CSS布局
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/taobao.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    页面功能组件</span>
+                                <h5 class="card-title"><a href="./zoomV2/zoomV2.html">仿淘宝缩略图预览</a></h5>
+                                <p class="card-text">JS结合CSS3实现图片定向缩放
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/lottory.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    页面功能组件</span>
+                                <h5 class="card-title"><a href="./lottory/lottory.html">随机转盘抽奖</a></h5>
+                                <p class="card-text">JS结合CSS实现带动画演示的随机抽奖
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/slider.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    页面功能组件</span>
+                                <h5 class="card-title"><a href="./slider/slider_0.html">轮播图</a></h5>
+                                <p class="card-text">JS结合CSS实现自动轮播图
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
             <div></div>
             <div></div>
             <div></div>
@@ -24,11 +120,12 @@
         </div>
     </div>
     <style>
-        body{
+        body {
             background: url('./Blog/images/bg.jpg')
         }
-        .block {
-            margin: 200px auto;
+
+        .box {
+            margin: -20px auto;
             width: 200px;
             height: 200px;
             position: relative;
@@ -38,7 +135,25 @@
             transition: all .1s;
         }
 
-        .block div {
+        .wrap {
+            padding: 50px 0;
+        }
+
+        a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(205, 232, 255);
+        }
+
+        .title {
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .box div {
             text-align: center;
             line-height: 200px;
             position: absolute;
@@ -50,32 +165,42 @@
             /* background: rgba(160, 212, 255, 0.5) */
         }
 
-        .block div:nth-child(1) {
+        .blog-info {
+            color: aliceblue;
+            padding: 5px 0 0 10px;
+        }
+
+        .blog-info h5 a {
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        .box div:nth-child(1) {
             transform: translateZ(-100px);
         }
 
-        .block div:nth-child(2) {
+        .box div:nth-child(2) {
             transform: translateZ(100px);
         }
 
-        .block div:nth-child(3) {
+        .box div:nth-child(3) {
             transform: rotateY(90deg) translateZ(100px);
         }
 
-        .block div:nth-child(4) {
+        .box div:nth-child(4) {
             transform: rotateY(90deg) translateZ(-100px);
         }
 
-        .block div:nth-child(5) {
+        .box div:nth-child(5) {
             transform: rotateX(90deg) translateZ(100px);
         }
 
-        .block div:nth-child(6) {
+        .box div:nth-child(6) {
             transform: rotateX(90deg) translateZ(-100px);
         }
     </style>
     <script>
-        box = document.getElementsByClassName('block')[0]
+        box = document.getElementsByClassName('box')[0]
         var x = 1;
         setInterval(function name(params) {
             x++;

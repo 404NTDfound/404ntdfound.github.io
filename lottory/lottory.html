@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮盘抽奖</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+    <div id="warp">
+        <div class="box">
+            <img class="rotate" src="images/turntable.png" alt="">
+            <div id="btn"></button>
+            </div>
+        </div>
+        <style>
+            .box {
+                margin: auto;
+                width: 650px;
+                height: 600px;
+                background: url(images/turntable-bg.jpg);
+                background-position: center;
+                background-size: cover;
+                position: relative;
+
+
+            }
+
+            .box img {
+                top: 59px;
+                left: 116px;
+                position: relative;
+                transition: all 1s;
+
+            }
+
+            #btn {
+                border: none;
+                margin: auto;
+                position: absolute;
+                top: 170px;
+                left: 265px;
+                width: 174px;
+                height: 228px;
+                background: url(images/pointer.png);
+                background-position: center;
+                background-size: cover;
+            }
+        </style>
+        <script>
+            var rota = document.getElementsByClassName('rotate')[0];
+            var canclick = true;
+            var info = {
+                text: undefined,
+                num: undefined
+            }
+            document.getElementById('btn').onclick = function () {
+
+                if (canclick == true) {
+                    canclick = false;
+                    rota.style.transition = 'all 0s'
+                    rota.style.transform = 'rotate(0deg)'
+
+                    setTimeout(function () {
+                        var x = Math.floor(Math.random() * 100);
+                        console.log('x' + x)
+                        if (x < 5) {
+                            info.num = 1
+                            info.text = '免单4999元'
+
+                        } else if (x < 10) {
+
+                            info.num = 2
+                            info.text = '免单50元'
+
+                        } else if (x < 20) {
+
+                            info.num = 3
+                            info.text = '免单10元'
+
+                        } else if (x < 35) {
+
+                            info.num = 4
+                            info.text = '免单5元'
+
+                        } else if (x < 55) {
+
+                            info.num = 5
+                            info.text = '免分期服务费'
+
+                        } else if (x < 75) {
+
+                            info.num = 6
+                            info.text = '提高白条额度'
+
+                        } else {
+                            info.num = 7
+                            info.text = '没有中奖呢Q&Q'
+
+                        }
+                        console.log(info)
+                        rota.style.transition = 'all 1s'
+                        var deg = 30 + (info.num - 1) * (360 / 7) + 3600
+                        rota.style.transform = 'rotate(' + deg + 'deg)'
+                    }, 10)
+
+                    setTimeout(function () {
+                        canclick = true;
+                        alert(info.text)
+                    }, 1100);
+                }
+
+            }
+        </script>
+</body>
+
+</html>
