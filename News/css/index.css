@@ -1,0 +1,65 @@
+#News {
+  max-width: 600px;
+  background: #fff;
+}
+#News .title {
+  background: #fff;
+}
+#News .title h3 {
+  text-align: center;
+  font-family: "微软雅黑", sans-serif;
+  font-weight: bold;
+  line-height: 35px;
+}
+#News .top-nav {
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 5rem;
+  padding-left: 5%;
+  background: #f5f7f9;
+}
+#News .top-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#News .pic {
+  position: relative;
+}
+#News .pic a {
+  color: #000;
+  text-decoration: none;
+}
+#News .pic ul {
+  padding: 0;
+  position: inherit;
+  overflow: hidden;
+}
+#News .pic ul li {
+  list-style: none;
+  border-bottom: 1px solid #f5f7f9;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  /* overflow: hidden; */
+}
+#News .pic ul li p {
+  color: #000;
+  font-weight: normal;
+  font-size: 1.6rem;
+  word-break: break-word;
+  font-family: "微软雅黑", sans-serif;
+}
+#News .pic ul li span {
+  color: #ccc;
+}
+#News .pic ul li .img-box img {
+  width: 100%;
+}
+#News .pic button {
+  width: 100%;
+  background: #e2e2e2;
+  position: relative;
+  bottom: 0;
+}
+/*# sourceMappingURL=./index.css.map */

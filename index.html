@@ -22,7 +22,7 @@
         <div id="blog">
             <div class="blog container">
                 <div class="title"> <span>个人</span>作品</div>
-                <div class="blog-box">
+                <div class="blog-box row">
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="blog-card">
                             <img src="./Blog/images/show/index.png" alt="" class="blog-img">
@@ -66,13 +66,13 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="blog-card">
-                            <img src="./Blog/images/show/taobao.png" alt="" class="blog-img">
+                            <img src="./Blog/images/show/news.png" alt="" class="blog-img">
                             <div class="blog-info">
-                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                <span class="date"><span class="fa fa-css3"></span>CSS Vue <span
                                         class=" fa fa-tag"></span>
-                                    页面功能组件</span>
-                                <h5 class="card-title"><a href="./zoomV2/zoomV2.html">仿淘宝缩略图预览</a></h5>
-                                <p class="card-text">JS结合CSS3实现图片定向缩放
+                                    页面排版</span>
+                                <h5 class="card-title"><a href="./News/Vuepic.html">移动端新闻页面</a></h5>
+                                <p class="card-text">从网易新闻API获取数据，结合VUE进行组件开发，点击加载按钮加载新闻，向下滚动到一定程度也能自动加载
                                 </p>
                             </div>
 
@@ -106,17 +106,33 @@
 
                         </div>
                     </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/taobao.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    页面功能组件</span>
+                                <h5 class="card-title"><a href="./zoomV2/zoomV2.html">仿淘宝缩略图预览</a></h5>
+                                <p class="card-text">JS结合CSS3实现图片定向缩放
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class=" col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="box">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </li>
 
                 </div>
             </div>
-        </div>
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
     <style>
@@ -124,16 +140,7 @@
             background: url('./Blog/images/bg.jpg')
         }
 
-        .box {
-            margin: -20px auto;
-            width: 200px;
-            height: 200px;
-            position: relative;
-            /* perspective: 500px; */
-            transform-style: preserve-3d;
-            transform: rotateX(30deg) rotateY(30deg);
-            transition: all .1s;
-        }
+
 
         .wrap {
             padding: 50px 0;
@@ -151,6 +158,17 @@
         .title {
             color: aliceblue;
             text-align: center;
+        }
+
+        .box {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* perspective: 500px; */
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(30deg);
+            transition: all .1s;
         }
 
         .box div {

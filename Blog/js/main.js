@@ -31,3 +31,11 @@ $(document).scroll(function () {
 });
 
 
+box = document.getElementsByClassName('box')[0]
+        var x = 1;
+        setInterval(function name(params) {
+            x++;
+            box.style.transform = 'rotateX(30deg) rotateY(' + (30 + x) + 'deg)'
+        }, 100)
+
+

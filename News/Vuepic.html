@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+    <div id="News" class="container-fluid">
+        <div class="title row">
+
+            <h3 class="col-lg-12 col-xs-12">新闻频道</h3>
+        </div>
+        <div class="top-nav row">
+            <li class="col-lg-2 col-xs-2">首页</li>
+            <li class="col-lg-2 col-xs-2">国内</li>
+            <li class="col-lg-2 col-xs-2">国际</li>
+            <li class="col-lg-2 col-xs-2">历史</li>
+        </div>
+        <div class="pic row">
+            <ul class="col-lg-12 col-xs-12">
+                <li v-for="(item, index) in picData" :key="index" class="row">
+
+                    <div class="content col-lg-7 col-xs-7">
+                        <p>
+                            <a v-bind:href="item.path">{{item.title}}</a>
+                        </p>
+                        <span>{{item.passtime}}</span>
+                    </div>
+                    <div class="img-box col-lg-5 col-xs-5">
+                        <img v-bind:src="item.image" v-bind:alt="item.title"  >
+                    </div>
+                </li>
+            </ul>
+            <button class="btn" v-on:click="getData">加载更多...</button>
+        </div>
+    </div>
+
+    <style>
+
+    </style>
+    <script>
+        var options = {
+            count: 5,
+            page: 1
+        }
+
+
+        function getData() {
+
+            $.getJSON("https://api.apiopen.top/getWangYiNews", options,
+                function (data, textStatus, jqXHR) {
+                    if (textStatus === 'success') {
+                        pic.picData = pic.picData.concat(data.result)
+                        options.page++
+                    }
+                }
+            );
+        }
+
+        var pic = new Vue({
+            el: "#News",
+            data: {
+                picData: []
+            },
+            methods: {
+                getData
+            }
+        })
+        
+        getData()
+
+        $(document).scroll(function () {
+            if ($('.btn').offset().top < ($(document).scrollTop() + window.innerHeight)) {
+                getData()
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
