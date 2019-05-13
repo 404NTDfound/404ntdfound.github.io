@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="warp">
+        <canvas id="stage" width="300" height="400">
+        </canvas>
+        <div class="score"></div>
+        <!-- <div class="score"></div> -->
+
+        <button>开始游戏</button>
+    </div>
+    <audio id='au' src="http://www.runoob.com/try/demo_source/horse.mp3"></audio>
+
+    <style>
+        #stage {
+            margin: 0 auto;
+            padding: 0;
+            border: 1px solid rebeccapurple;
+            position: relative;
+            background: url(th.jpg) no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+
+        }
+
+
+        .warp {
+            width: 300px;
+
+            margin: 0 auto;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            display: block;
+            margin: 10px auto;
+            position: relative;
+
+        }
+
+        .score {
+            width: 50px;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            position: relative;
+            color: tomato;
+            line-height: 50px;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="snake.js"></script>
+</body>
+
+</html>
