@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c7eb0"],{5351:function(n,t,e){"use strict";e.r(t);var a=function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("div",{staticClass:"Digtal"},[e("Secondnav",[n._v("数码频道")]),e("Listdev",{attrs:{link:"BAI6JOD9wangning"}})],1)},s=[],c=e("cbbf"),i={name:"Digtal",components:{Listdev:c["a"]}},l=i,o=e("2877"),u=Object(o["a"])(l,a,s,!1,null,null,null);t["default"]=u.exports}}]);
+//# sourceMappingURL=chunk-2d0c7eb0.7e0306aa.js.map
