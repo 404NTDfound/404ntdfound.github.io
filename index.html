@@ -8,7 +8,7 @@
     <title>个人作品</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./Blog/css/index.css">
+    <!-- <link rel="stylesheet" href="./Blog/css/index.css"> -->
 </head>
 
 <body>
@@ -21,7 +21,9 @@
         </ul> -->
         <div id="blog">
             <div class="blog container">
-                <div class="title"> <span>个人</span>作品</div>
+                <div class="title"> <span>个人作品</span></div>
+                <hr>
+                <h5>Vue项目</h5>
                 <div class="blog-box row">
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="blog-card">
@@ -37,20 +39,7 @@
 
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="blog-card">
-                            <img src="./Blog/images/show/3dcard.png" alt="" class="blog-img">
-                            <div class="blog-info">
-                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
-                                        class=" fa fa-tag"></span>
-                                    视觉效果</span>
-                                <h5 class="card-title"><a href="./3Dcard/index.html">3d卡片</a></h5>
-                                <p class="card-text">CSS3 3D效果实现卡片立体翻转
-                                </p>
-                            </div>
 
-                        </div>
-                    </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="blog-card">
                             <img src="./Blog/images/show/PAGE.png" alt="" class="blog-img">
@@ -64,15 +53,29 @@
 
                         </div>
                     </li>
+
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="blog-card">
-                            <img src="./Blog/images/show/news.png" alt="" class="blog-img">
+                            <img src="./Blog/images/show/3dcard.png" alt="" class="blog-img">
+                            <div class="blog-info">
+                                <span class="date"><span class="fa fa-css3"></span> CSS JS<span
+                                        class=" fa fa-tag"></span>
+                                    视觉效果</span>
+                                <h5 class="card-title"><a href="./3Dcard/index.html">3d卡片</a></h5>
+                                <p class="card-text">CSS3 3D效果实现卡片立体翻转
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="blog-card">
+                            <img src="./Blog/images/show/newsApp.png" alt="" class="blog-img">
                             <div class="blog-info">
                                 <span class="date"><span class="fa fa-css3"></span>CSS Vue <span
                                         class=" fa fa-tag"></span>
                                     页面排版</span>
-                                <h5 class="card-title"><a href="./News/Vuepic.html">移动端新闻页面</a></h5>
-                                <p class="card-text">从网易新闻API获取数据，结合VUE进行组件开发，点击加载按钮加载新闻，向下滚动到一定程度也能自动加载
+                                <h5 class="card-title"><a href="./Newsapp/index.html">移动端新闻页面</a></h5>
+                                <p class="card-text">从网易新闻API获取数据，以VUE框架为主进行组件开发，切换新闻分类，向下滚动自动加载更多新闻，跳转详情页后的推荐新闻也能继续跳转
                                 </p>
                             </div>
 
@@ -126,7 +129,19 @@
             background-attachment: fixed;
         }
 
+        img {
+            width: 100%;
+        }
 
+        span {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        h5 {
+            color: #fff;
+            font-weight: bold;
+        }
 
         .wrap {
             padding: 50px 0;
@@ -142,6 +157,7 @@
         }
 
         .title {
+            font-size: 24px;
             color: aliceblue;
             text-align: center;
         }
