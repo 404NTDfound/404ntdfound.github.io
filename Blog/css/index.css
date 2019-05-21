@@ -414,7 +414,6 @@ h1 span {
 
 #blog img {
 	width: 100%;
-	border: 5px solid lightblue;
 	border-radius: 10px;
 	display: block;
 	margin: 0 auto;
@@ -425,7 +424,12 @@ h1 span {
 	float: left;
 	padding: 15px;
 }
-
+#blog .blog .blog-box .cardbox>div{
+	min-height: 400px;
+}
+#blog .blog .blog-box .cardbox>div .thumbnail{
+	min-height: 400px;
+}
 #blog .blog .blog-box li.col-sm-12 {
 	text-align: center;
 	padding: 15px;
@@ -665,7 +669,7 @@ footer .footer span {
 
 /* 盒子 */
 .box {
-	margin: 0 auto;
+	margin: 20% auto;
 	width: 150px;
 	height: 150px;
 	position: relative;
