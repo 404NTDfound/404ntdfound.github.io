@@ -1,0 +1,63 @@
+.slider {
+  width: 500px;
+  margin: 0 auto;
+  background: lightblue;
+  overflow: hidden;
+  position: relative;
+}
+.slider .content {
+  width: 2500px;
+  overflow: hidden;
+  transition: all 0.6s;
+}
+.slider .content li {
+  list-style: none;
+  text-align: center;
+  color: white;
+  width: 500px;
+  height: 300px;
+  line-height: 300px;
+  float: left;
+  transition: all 1s;
+}
+.slider .content li.item1 {
+  background: lightcoral;
+}
+.slider .content li.item2 {
+  background: orange;
+}
+.slider .content li.item3 {
+  background: lightgreen;
+}
+.slider .content li.item4 {
+  background: olive;
+}
+.slider .content li.item5 {
+  background: darkcyan;
+}
+.slider .content li i {
+  font-size: 48px;
+}
+.slider .control span {
+  position: absolute;
+  top: 50%;
+  background: red;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: -20px;
+  color: white;
+  transition: all 0.3s;
+}
+.slider .control span:first-child {
+  left: -70px;
+}
+.slider .control span:last-child {
+  right: -70px;
+}
+.slider:hover .control span:first-child {
+  left: 0px;
+}
+.slider:hover .control span:last-child {
+  right: 0px;
+}
+/*# sourceMappingURL=./main.css.map */

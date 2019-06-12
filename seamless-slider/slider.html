@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="content">
+            <li class="item1"><i class="fa fa-image">1</i></li>
+            <li class="item2"><i class="fa fa-gears">2</i></li>
+            <li class="item3"><i class="fa fa-sliders">3</i></li>
+            <li class="item4"><i class="fa fa-code"></i>4</li>
+            <li class="item5"><i class="fa fa-microphone-slash">5</i></li>
+        </div>
+        <div class="control">
+            <span>prev</span>
+            <span>next</span>
+        </div>
+    </div>
+    <script>
+        
+        var content = document.querySelector('.slider .content')
+
+        function nextPic() {
+            var lis = document.querySelectorAll('.slider .content li')
+            lis[0].style.marginLeft = '-500px'
+            setTimeout(function() {
+                content.appendChild(lis[0])
+                lis[0].style.marginLeft = '0'
+            },1000)
+        }
+
+        document.querySelectorAll('.slider .control span')[1].onclick = function () {
+            nextPic()
+        }
+
+        function prevPic() {
+            var lis = document.querySelectorAll('.slider .content li')
+            lis[lis.length-1].style.marginLeft = '-500px'
+            content.insertBefore(lis[lis.length-1],lis[0])
+            setTimeout(function () {
+                lis[lis.length-1].style.marginLeft = '0'
+            },1000)
+        }
+        document.querySelectorAll('.slider .control span')[0].onclick = function () {
+            prevPic()
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../JQtest/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="stage">
+        <div class="imgBox">
+            <img src="../JQtest/153240254730310.png" alt="">
+            <div class="mask"></div>
+        </div>
+        <div class="zoom"><img src="../JQtest/153240254730310.png" alt=""></div>
+    </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgBox {
+            width: 235px;
+            height: 300px;
+            float: left;
+            position: relative;
+        }
+
+        .imgBox img {
+            width: 100%;
+            height: 300px;
+        }
+        .imgBox:hover .mask{
+            opacity: 1;
+        }
+
+        .zoom {
+            opacity: 0;
+            width: 235px;
+            height: 300px;
+            float: left;
+            position: relative;
+            background: url(153240254730310.png);
+            overflow: hidden;
+            margin: 0 10px;
+            transition: all .3s;
+        }
+
+        .zoom img {
+            width: 300%;
+            position: absolute;
+        }
+
+        .mask { 
+            opacity: 0;
+            width: 78px;
+            height: 100px;
+            margin-left: 0;
+            margin-top: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(250, 250, 210, 0.616);
+            transition: all .1s;
+        }
+    </style>
+    <script>
+        $('.imgBox').mousemove(function (e) {
+            $('.zoom').css({
+                'opacity':1
+            })
+            console.log(e.pageX, e.pageY);
+            var x = e.pageX
+            var y = e.pageY
+            if (x>196) {
+                x=196
+            }
+            if (x<39) {
+                x=39
+            }
+            if (y>250) {
+                y=250
+            }
+            if (y<50) {
+                y=50
+            }
+            $('.mask').css({
+                'left': x - 39, 
+                'top': y - 50 
+            })
+            $('.zoom img').css({
+                'left': -(x - 39)*3, 
+                'top': -(y - 50)*3
+            })
+        })
+        $('.imgBox').mouseleave(function () {
+            $('.zoom').css({
+                'opacity':0
+            })
+        })
+    </script>
+</body>
+
+</html>
